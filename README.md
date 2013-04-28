@@ -1,11 +1,10 @@
-
 # `fin` - a growly finale for bash 
 
 `fin` is a bash script over [growlnotify](http://growl.info/downloads), to get notified when your lengthy job on terminal has finished.
 
 With `fin` you can shamelessly continue browsing your facebook while your computer is doing hardwork. `fin` will tell you when your job is over, how it was finished (exit code). Plus, you would get a nice smiley :) on successful exit rather than just plain code 0.
 
-![fin screenshot](http://jangxyz.github.io/fin/screenshot.png Image Here)
+![fin screenshot](http://jangxyz.github.io/fin/screenshot.png)
 
 Really, you could do all this with just using `growlnotify`. But I think `./do_some_job; fin` is much better than `./do_some_job; growlnotify -t 'what' -m "uh.. yeah here's what you've got: $? "`. Don't you?
 
