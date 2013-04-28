@@ -1,12 +1,15 @@
-# `fin` - a growly finale for bash 
+# fin - a growly finale for bash 
 
 `fin` is a bash script over [growlnotify](http://growl.info/downloads), to get notified when your lengthy job on terminal has finished.
 
-With `fin` you can shamelessly continue browsing your facebook while your computer is doing hardwork. `fin` will tell you when your job is over, how it was finished (exit code). Plus, you would get a nice smiley :) on successful exit rather than just plain code 0.
+With `fin` you can shamelessly continue browsing your facebook while your computer is doing hardwork. <br>
+`fin` will tell you when your job is over, how it was finished (exit code). <br>
+Plus, you would get a nice smiley :) on successful exit rather than just plain code 0.
 
 ![fin screenshot](http://jangxyz.github.io/fin/screenshot.png)
 
-Really, you could do all this with just using `growlnotify`. But I think `./do_some_job; fin` is much better than `./do_some_job; growlnotify -t 'what' -m "uh.. yeah here's what you've got: $? "`. Don't you?
+Really, you could do all this with just using `growlnotify`. But I think `./do_some_job; fin` is much better than `./do_some_job; growlnotify -t 'what' -m "uh.. yeah here's what you've got: $? "`. <br>
+Don't you?
 
 `fin` is clever enough not to overwrite the exit code. It will exit with the same exit code it has received, so you can do more bash scripting afterwards.
 
@@ -14,10 +17,10 @@ Really, you could do all this with just using `growlnotify`. But I think `./do_s
 ### Install ###
 
 0. Install `growl` and `growlnotify`. This is a prerequisite.
-1. Copy `fin` executable to any directory in path, such as $HOME/bin
+1. Copy `fin` executable to any directory in path, such as `$HOME/bin`
 2. Add alias to your `.bashrc`. This makes your life easier.
 
-	alias fin='$HOME/bin/fin_exit $?'
+    	alias fin='$HOME/bin/fin_exit $?'
 
 
 ### Usage ###
