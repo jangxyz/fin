@@ -18,7 +18,7 @@ Really, you could do all this with just using `growlnotify`. But I think `./do_s
 1. Copy `fin` executable to any directory in path, such as $HOME/bin
 2. Add alias to your `.bashrc`. This makes your life easier.
 
-	alias fin='$HOME/bin/fin_exit $?'
+	alias fin='$HOME/bin/fin $?'
 
 
 ### Usage ###
