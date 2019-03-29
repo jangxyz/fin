@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#       fin - a growly finale for bash 
+#       fin - a macos finale for bash 
 #
 # options:
 #   -t|--title: title (default 'done')
@@ -27,6 +27,8 @@ function usage {
 }
 
 GROWL="/usr/local/bin/growlnotify"
+NOTIFY="$GROWL"
+#osascript -e 'display notification "Notification text" with title "Title"'
 
 # usage
 if [ $# -lt 1 ]; then
@@ -114,11 +116,11 @@ if [ x"$sticky" != "x" ]; then
 fi
 
 # notify
-echo $GROWL -t "\"${title}\"" -m "\"${msg}\"" "$sticky"
-$GROWL -t "${title}" -m "${msg}" "$sticky"
+#echo $GROWL -t "\"${title}\"" -m "\"${msg}\"" "$sticky"
+#$GROWL -t "${title}" -m "${msg}" "$sticky"
+echo osascript -e "display notification \"${msg}\" with title \"${title}\""
+osascript -e "display notification \"${msg}\" with title \"${title}\""
 
 # return
 exit $result_passed
 
-
-# vim: ft=sh
